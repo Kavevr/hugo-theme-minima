@@ -41,9 +41,10 @@
 {{ end }}
 </head>
 <script>
-  const theme_config = '{{ .Site.Params.defaultTheme }}'
+  const theme_config = '{{ .Site.Params.defaultTheme }}';
+
   const theme_light = theme_config === 'system' ? 'light' : theme_config;
-  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : theme_light;
+  let theme = theme_light
   console.debug(theme);
 
   try {
